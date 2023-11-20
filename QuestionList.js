@@ -1,6 +1,7 @@
 import React from "react";
 
 function QuestionList({ questions, deleteQuestion, updateQuestion }) {
+  //
   const handleDelete = (id) => {
     fetch(`http://localhost:4000/questions/${id}`, {
       method: "DELETE",
@@ -23,7 +24,6 @@ function QuestionList({ questions, deleteQuestion, updateQuestion }) {
       .then((data) => updateQuestion(data))
       .catch((error) => console.log(error));
   };
-
   return (
     <div>
       {questions.map((question) => (
